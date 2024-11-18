@@ -15,19 +15,57 @@
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
         }
 
-        .access_btn {      
-
-        }
         .access_btn img{
             position: Fixed;
             top: 1rem;
             right: 1rem;
             width: 5%;
+            /* transition: 3s ease-in; */
+        }
+
+        .a_fly_btn img{
+            position: Fixed;
+            bottom: 1rem;
+            left: 1rem;
+            width: 5%;
         }
 
         .access_btn img:hover{
             cursor: pointer;
+            transform: rotate(10deg );
         }
+
+        .a_fly_btn img:hover{
+            cursor: pointer;
+            transform: rotate(30deg );
+            scale: 1.5;
+
+        }
+
+        /* .a_fly_btn img::after{
+            content: "";           
+            width: 1000px;
+            height: 1000px;
+            position: absolute;
+            
+            background-color: green;
+        } */
+
+        /* Keyframe animation for spinning and moving horizontally */
+        @keyframes spin-and-move {
+            0% {
+            transform: translateY(-10%) rotate(0deg); /* Start with no rotation */
+            left: 0;
+            }
+
+            100% {
+            transform: translateY(-10%) rotate(360deg); /* Full rotation */
+            left: 100%; /* Move the image to the far right */
+            }
+        }
+
+        /* ##################################### */
+
 
         header {
             background-color: #333;
